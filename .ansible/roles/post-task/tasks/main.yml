@@ -1,0 +1,14 @@
+---
+
+- name: let's get the package back
+  command: chdir=/var/tmp/testcore dotnet restore
+
+- name: let's build the thing
+  command: chdir=/var/tmp/testcore/src/PrimeService dotnet build
+
+- name: let's build the test
+  command: chdir=/var/tmp/testcore/test/PrimeServices.Tests dotnet build
+
+#- name: let's run some tests
+#  command: chdir=/var/tmp/testcore/test/PrimeServices.Tests dotnet test
+

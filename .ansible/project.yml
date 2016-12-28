@@ -1,0 +1,11 @@
+- name: Install and configure .netCore
+  hosts: app-web
+  sudo: yes
+  roles:
+  - dotnet
+
+
+- name: Post tasks
+  hosts: app-web
+  roles:
+  - post-task
